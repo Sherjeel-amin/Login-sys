@@ -16,7 +16,7 @@ require '../Controllers/UserController.php';
 
     <div class="container">
         
-    <form action= "../Controllers//UserController.php" method="post" >
+    <form action= "../Controllers//UserController.php" method="post" onsubmit="return validateForm()">
 
         <br>
         <h3> Registration Form</h3><br>
@@ -29,6 +29,7 @@ require '../Controllers/UserController.php';
         <input type="password" name="password" id="input-box-password"  placeholder="Password" required><br>
         <button type="submit">Submit</button>
 
+        <script defer src="../Javascript/login.js"></script>
     </form>
 </div>
 
