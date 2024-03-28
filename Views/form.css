@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-image: url('https://images.unsplash.com/photo-1572040917409-60ca0cfcc2df?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+
+
+}
+
+
+@media screen and (max-width:500px) {
+    .container {
+        width: 200px;
+        height: 250px;
+        padding: 5px;
+        font-size: smaller;
+        font-weight: small;
+
+    }
+
+    .body {
+        width: 100%;
+        height: 100vh;
+    }
+
+}
+
+.container {
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: top;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: rgb(239, 238, 245);
+    /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 40px;
+
+}
+
+button {
+    float: 50px;
+    color: whitesmoke;
+    padding: 15px 20px;
+    font-size: medium;
+    /* background-color: rgb(226, 233, 226); */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin: 8px 8px 8px 150px;
+
+}
+
+input[type=text], input[type=password] , input[type=email]{
+    padding: 15px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 17px;
+
+}
+
+label {
+    padding: 10px;
+}
+
+input::placeholder {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 15px;
+}
+
+button:hover {
+    color: rgb(239, 230, 230);
+    font-size: large;
+    transition: all 0.2s ease-in-out;
+    padding: 15px 18px;
+    border-radius: 25px;
+
+}
+
+input:hover {
+    transition: all 0.2s ease-in-out;
+    padding: 15px 17px;
+}
+
+.col,
+h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
