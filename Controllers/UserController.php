@@ -19,10 +19,10 @@ class UserController {
             return false;
         }
     }
-    public function userNotExists($username, $password, $email) {
+    public function userNotExists($username, $hashPass, $email) {
         if (!$this->userExists($username,$email)) {
            $userModel = new UserModel();
-           $userModel->addUser($username, $password, $email);
+           $userModel->addUser($username, $hashPass, $email);
            return true;
         }
         return false; 
@@ -32,11 +32,12 @@ class UserController {
             $username = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];
+            $hashPass = password_hash($password, PASSWORD_DEFAULT);
 
             if ($this->userExists($username,$email)) {
                 $message = "User with this username already exists.";
             } else {
-                $success = $this->userNotExists($username, $password, $email);
+                $success = $this->userNotExists($username, $hashPass, $email);
 
                 if ($success) {
                     session_start();

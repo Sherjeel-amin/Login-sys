@@ -23,7 +23,7 @@ class LoginController {
                 $user = $userModel->getUserEmail($email);
                 
                 if ($user) {
-                    if ($password == $user['password']) {
+                    if (password_verify($password, $user['password'])) {
                         session_start();
                         $_SESSION['loggedin'] = true;
                         $_SESSION['username'] = $email;

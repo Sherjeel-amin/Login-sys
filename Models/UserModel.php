@@ -9,9 +9,9 @@ class UserModel {
         $this->db->getConnection();
     }
 
-    public function addUser($username, $password, $email) {
+    public function addUser($username, $hashPass, $email) {
         $query = $this->db->conn->prepare("INSERT INTO `user` (username, password, email) VALUES (?, ?, ?)");
-        $query->bind_param("sss", $username, $password, $email);
+        $query->bind_param("sss", $username, $hashPass, $email);
         $result = $query->execute();
         return $result;
     }
